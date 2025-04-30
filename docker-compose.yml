@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  fastapi:
+    build: ./fastapi_app
+    ports:
+      - "8000:8000"
+    environment:
+      - COSMOSDB_URI=your_cosmosdb_uri
+      - OPENAI_API_KEY=your_openai_key
+  django:
+    build: ./django_admin
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=your_cosmosdb_uri

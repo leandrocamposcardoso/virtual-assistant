@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Estilos para os botões */
+    button, a {
+      padding: 5px 15px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    button {
+      border: none;
+    }
+    .btn-voltar {
+      background-color: #2196F3;
+    }
+    .btn-exportar {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conversas</h1>
+
+  <form method="get">
+    <label for="user_id">Filtrar por User ID:</label>
+    <input type="text" name="user_id" id="user_id" value="{{ user_id_filter }}">
+    <input type="submit" value="Filtrar">
+    {% if user_id_filter %}
+      <a href=".">Limpar</a>
+    {% endif %}
+    <a href="?user_id={{ user_id_filter }}&export=csv" class="btn-exportar" style="margin-left: 20px;">
+      <i class="fas fa-file-csv"></i> Exportar CSV
+    </a>
+  </form>
+
+  <div style="margin-top: 20px; margin-bottom: 20px;">
+    <button onclick="history.back()" class="btn-voltar">
+      <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+  </div>
+
+  <table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>User ID</th>
+        <th>Pergunta</th>
+        <th>Resposta</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.user_id }}</td>
+          <td>{{ item.question|truncatechars:100 }}</td>
+          <td>{{ item.response|truncatechars:100 }}</td>
+          <td>{{ item.timestamp }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="5">Nenhum resultado.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div style="margin-top: 20px;">
+    <strong>Página {{ page }} de {{ total_pages }}</strong><br>
+    {% if page > 1 %}
+      <a href="?page={{ page|add:"-1" }}&user_id={{ user_id_filter }}">Anterior</a>
+    {% endif %}
+    {% if page < total_pages %}
+      <a href="?page={{ page|add:"1" }}&user_id={{ user_id_filter }}" style="margin-left: 20px;">Próxima</a>
+    {% endif %}
+  </div>
+</body>
+</html>

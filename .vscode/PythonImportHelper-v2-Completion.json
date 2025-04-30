@@ -1,0 +1,974 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosClient",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "PartitionKey",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosClient",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosClient",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "PartitionKey",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "azure.cosmos",
+        "description": "azure.cosmos",
+        "isExtraImport": true,
+        "detail": "azure.cosmos",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "LogEntry",
+        "importPath": "django.contrib.admin.models",
+        "description": "django.contrib.admin.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ColoredFormatter",
+        "importPath": "colorlog",
+        "description": "colorlog",
+        "isExtraImport": true,
+        "detail": "colorlog",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "app.config.logging_config",
+        "description": "app.config.logging_config",
+        "isExtraImport": true,
+        "detail": "app.config.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosDBConnector",
+        "importPath": "app.services.cosmos_connector",
+        "description": "app.services.cosmos_connector",
+        "isExtraImport": true,
+        "detail": "app.services.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosDBConnector",
+        "importPath": "app.services.cosmos_connector",
+        "description": "app.services.cosmos_connector",
+        "isExtraImport": true,
+        "detail": "app.services.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosDBConnector",
+        "importPath": "app.services.cosmos_connector",
+        "description": "app.services.cosmos_connector",
+        "isExtraImport": true,
+        "detail": "app.services.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "ChatPromptTemplate",
+        "importPath": "langchain_core.prompts",
+        "description": "langchain_core.prompts",
+        "isExtraImport": true,
+        "detail": "langchain_core.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "HumanMessage",
+        "importPath": "langchain.schema",
+        "description": "langchain.schema",
+        "isExtraImport": true,
+        "detail": "langchain.schema",
+        "documentation": {}
+    },
+    {
+        "label": "AIMessage",
+        "importPath": "langchain.schema",
+        "description": "langchain.schema",
+        "isExtraImport": true,
+        "detail": "langchain.schema",
+        "documentation": {}
+    },
+    {
+        "label": "ChatOpenAI",
+        "importPath": "langchain_openai",
+        "description": "langchain_openai",
+        "isExtraImport": true,
+        "detail": "langchain_openai",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ask_gpt",
+        "importPath": "app.services.langchain_service",
+        "description": "app.services.langchain_service",
+        "isExtraImport": true,
+        "detail": "app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "save_conversation",
+        "importPath": "app.services.cosmos_service",
+        "description": "app.services.cosmos_service",
+        "isExtraImport": true,
+        "detail": "app.services.cosmos_service",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosDBConnector",
+        "kind": 6,
+        "importPath": "django_admin.conversations.helper.cosmos_connector",
+        "description": "django_admin.conversations.helper.cosmos_connector",
+        "peekOfCode": "class CosmosDBConnector:\n    def __init__(self, connection_string: Optional[str] = None, database_name: str = 'AssistenteDB',\n                 container_name: str = 'Conversations'):\n        endpoint = os.getenv(\"COSMOSDB_URI\")\n        key = os.getenv(\"COSMOSDB_KEY\")\n        if not endpoint or not key:\n            raise ValueError(\"Variáveis COSMOSDB_URI ou COSMOSDB_KEY não encontradas no .env\")\n        self.connection_string = f\"AccountEndpoint={endpoint};AccountKey={key};\"\n        self.database_name = database_name\n        self.container_name = container_name",
+        "detail": "django_admin.conversations.helper.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "django_admin.conversations.helper.cosmos_connector",
+        "description": "django_admin.conversations.helper.cosmos_connector",
+        "peekOfCode": "logger = logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')\n# Carregar variáveis do arquivo .env\nload_dotenv()\nclass CosmosDBConnector:\n    def __init__(self, connection_string: Optional[str] = None, database_name: str = 'AssistenteDB',\n                 container_name: str = 'Conversations'):\n        endpoint = os.getenv(\"COSMOSDB_URI\")\n        key = os.getenv(\"COSMOSDB_KEY\")\n        if not endpoint or not key:\n            raise ValueError(\"Variáveis COSMOSDB_URI ou COSMOSDB_KEY não encontradas no .env\")",
+        "detail": "django_admin.conversations.helper.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_admin.conversations.migrations.0001_initial",
+        "description": "django_admin.conversations.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Conversation',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('user_id', models.CharField(max_length=255)),",
+        "detail": "django_admin.conversations.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosConversationAdmin",
+        "kind": 6,
+        "importPath": "django_admin.conversations.admin",
+        "description": "django_admin.conversations.admin",
+        "peekOfCode": "class CosmosConversationAdmin(admin.ModelAdmin):\n    change_list_template = \"admin/cosmos_conversations.html\"\n    def get_urls(self):\n        urls = super().get_urls()\n        my_urls = [\n            path('', self.admin_site.admin_view(self.cosmos_view))\n        ]\n        return my_urls + urls\n    def cosmos_view(self, request):\n        cosmos_uri = os.getenv('COSMOSDB_URI')",
+        "detail": "django_admin.conversations.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationsConfig",
+        "kind": 6,
+        "importPath": "django_admin.conversations.apps",
+        "description": "django_admin.conversations.apps",
+        "peekOfCode": "class ConversationsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'conversations'",
+        "detail": "django_admin.conversations.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Conversation",
+        "kind": 6,
+        "importPath": "django_admin.conversations.models",
+        "description": "django_admin.conversations.models",
+        "peekOfCode": "class Conversation(models.Model):\n    user_id = models.CharField(max_length=255)\n    question = models.TextField()\n    answer = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        managed = False\n        verbose_name = \"Conversas\"\n        verbose_name_plural = \"Conversas\"\n        db_table = 'cosmos_conversation'",
+        "detail": "django_admin.conversations.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "django_admin.conversations.urls",
+        "description": "django_admin.conversations.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"chat/\", chat_view, name=\"chat\"),\n]",
+        "detail": "django_admin.conversations.urls",
+        "documentation": {}
+    },
+    {
+        "label": "chat_view",
+        "kind": 2,
+        "importPath": "django_admin.conversations.views",
+        "description": "django_admin.conversations.views",
+        "peekOfCode": "def chat_view(request):\n    user_id = request.GET.get(\"user_id\", \"teste2\")\n    resposta = None\n    if request.method == \"POST\":\n        question = request.POST.get(\"question\")\n        try:\n            response = requests.post(FASTAPI_URL, json={\n                \"question\": question,\n                \"user_id\": user_id\n            })",
+        "detail": "django_admin.conversations.views",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_NAME",
+        "kind": 5,
+        "importPath": "django_admin.conversations.views",
+        "description": "django_admin.conversations.views",
+        "peekOfCode": "DATABASE_NAME = 'AssistenteDB'\nCONTAINER_NAME = 'Conversations'\nFASTAPI_URL = os.getenv(\"FASTAPI_URL\", \"http://127.0.0.1:8000/ask\")\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\ndef chat_view(request):\n    user_id = request.GET.get(\"user_id\", \"teste2\")\n    resposta = None\n    if request.method == \"POST\":\n        question = request.POST.get(\"question\")\n        try:",
+        "detail": "django_admin.conversations.views",
+        "documentation": {}
+    },
+    {
+        "label": "CONTAINER_NAME",
+        "kind": 5,
+        "importPath": "django_admin.conversations.views",
+        "description": "django_admin.conversations.views",
+        "peekOfCode": "CONTAINER_NAME = 'Conversations'\nFASTAPI_URL = os.getenv(\"FASTAPI_URL\", \"http://127.0.0.1:8000/ask\")\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\ndef chat_view(request):\n    user_id = request.GET.get(\"user_id\", \"teste2\")\n    resposta = None\n    if request.method == \"POST\":\n        question = request.POST.get(\"question\")\n        try:\n            response = requests.post(FASTAPI_URL, json={",
+        "detail": "django_admin.conversations.views",
+        "documentation": {}
+    },
+    {
+        "label": "FASTAPI_URL",
+        "kind": 5,
+        "importPath": "django_admin.conversations.views",
+        "description": "django_admin.conversations.views",
+        "peekOfCode": "FASTAPI_URL = os.getenv(\"FASTAPI_URL\", \"http://127.0.0.1:8000/ask\")\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\ndef chat_view(request):\n    user_id = request.GET.get(\"user_id\", \"teste2\")\n    resposta = None\n    if request.method == \"POST\":\n        question = request.POST.get(\"question\")\n        try:\n            response = requests.post(FASTAPI_URL, json={\n                \"question\": question,",
+        "detail": "django_admin.conversations.views",
+        "documentation": {}
+    },
+    {
+        "label": "connector",
+        "kind": 5,
+        "importPath": "django_admin.conversations.views",
+        "description": "django_admin.conversations.views",
+        "peekOfCode": "connector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\ndef chat_view(request):\n    user_id = request.GET.get(\"user_id\", \"teste2\")\n    resposta = None\n    if request.method == \"POST\":\n        question = request.POST.get(\"question\")\n        try:\n            response = requests.post(FASTAPI_URL, json={\n                \"question\": question,\n                \"user_id\": user_id",
+        "detail": "django_admin.conversations.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.asgi",
+        "description": "django_admin.django_admin.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "django_admin.django_admin.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-a$df^%255ooiu31bi@l0053p6d@0(bahk)n%xlah!r)kzc0ydl'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    '*',\n    \"whole-jobs-shave.loca.lt\",",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-a$df^%255ooiu31bi@l0053p6d@0(bahk)n%xlah!r)kzc0ydl'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    '*',\n    \"whole-jobs-shave.loca.lt\",\n    \"localhost\",\n    \"127.0.0.1\"]\n# Application definition\nCSRF_TRUSTED_ORIGINS = [",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    '*',\n    \"whole-jobs-shave.loca.lt\",\n    \"localhost\",\n    \"127.0.0.1\"]\n# Application definition\nCSRF_TRUSTED_ORIGINS = [\n    'https://*',\n    \"https://df8e-201-17-152-2.ngrok-free.app\",",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    '*',\n    \"whole-jobs-shave.loca.lt\",\n    \"localhost\",\n    \"127.0.0.1\"]\n# Application definition\nCSRF_TRUSTED_ORIGINS = [\n    'https://*',\n    \"https://df8e-201-17-152-2.ngrok-free.app\",\n    \"https://whole-jobs-shave.loca.lt\"",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://*',\n    \"https://df8e-201-17-152-2.ngrok-free.app\",\n    \"https://whole-jobs-shave.loca.lt\"\n]\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'conversations'\n]\nMIDDLEWARE = [",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'django_admin.urls'",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "ROOT_URLCONF = 'django_admin.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'conversations', 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'conversations', 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'django_admin.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nload_dotenv()",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nload_dotenv()",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nload_dotenv()",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / \"static\"]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nload_dotenv()",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.settings",
+        "description": "django_admin.django_admin.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nload_dotenv()",
+        "detail": "django_admin.django_admin.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.urls",
+        "description": "django_admin.django_admin.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path(\"conversations/\", include(\"conversations.urls\")),\n]",
+        "detail": "django_admin.django_admin.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "django_admin.django_admin.wsgi",
+        "description": "django_admin.django_admin.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "django_admin.django_admin.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "django_admin.manage",
+        "description": "django_admin.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_admin.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "django_admin.manage",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "kind": 2,
+        "importPath": "fastapi_app.app.config.logging_config",
+        "description": "fastapi_app.app.config.logging_config",
+        "peekOfCode": "def setup_logger(name: str) -> logging.Logger:\n    formatter = ColoredFormatter(\n        \"%(log_color)s%(levelname)s: %(message)s\",\n        log_colors={\n            \"DEBUG\": \"cyan\",\n            \"INFO\": \"green\",\n            \"WARNING\": \"yellow\",\n            \"ERROR\": \"red\",\n            \"CRITICAL\": \"bold_red\",\n        },",
+        "detail": "fastapi_app.app.config.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "CosmosDBConnector",
+        "kind": 6,
+        "importPath": "fastapi_app.app.services.cosmos_connector",
+        "description": "fastapi_app.app.services.cosmos_connector",
+        "peekOfCode": "class CosmosDBConnector:\n    def __init__(self, connection_string: Optional[str] = None, database_name: str = 'AssistenteDB',\n                 container_name: str = 'Conversations'):\n        endpoint = os.getenv(\"COSMOSDB_URI\")\n        key = os.getenv(\"COSMOSDB_KEY\")\n        if not endpoint or not key:\n            raise ValueError(\"Variáveis COSMOSDB_URI ou COSMOSDB_KEY não encontradas no .env\")\n        self.connection_string = f\"AccountEndpoint={endpoint};AccountKey={key};\"\n        self.database_name = database_name\n        self.container_name = container_name",
+        "detail": "fastapi_app.app.services.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.cosmos_connector",
+        "description": "fastapi_app.app.services.cosmos_connector",
+        "peekOfCode": "logger = setup_logger(__name__)\n# Carregar variáveis do arquivo .env\nload_dotenv()\nclass CosmosDBConnector:\n    def __init__(self, connection_string: Optional[str] = None, database_name: str = 'AssistenteDB',\n                 container_name: str = 'Conversations'):\n        endpoint = os.getenv(\"COSMOSDB_URI\")\n        key = os.getenv(\"COSMOSDB_KEY\")\n        if not endpoint or not key:\n            raise ValueError(\"Variáveis COSMOSDB_URI ou COSMOSDB_KEY não encontradas no .env\")",
+        "detail": "fastapi_app.app.services.cosmos_connector",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_NAME",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.cosmos_service",
+        "description": "fastapi_app.app.services.cosmos_service",
+        "peekOfCode": "DATABASE_NAME = 'AssistenteDB'\nCONTAINER_NAME = 'Conversations'\n# Inicializar o conector\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nasync def save_conversation(user_id: str, question: str, response: str) -> None:\n    item = {\n        \"id\": f\"{user_id}-{datetime.utcnow().isoformat()}\",\n        \"user_id\": user_id,\n        \"question\": question,\n        \"response\": response,",
+        "detail": "fastapi_app.app.services.cosmos_service",
+        "documentation": {}
+    },
+    {
+        "label": "CONTAINER_NAME",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.cosmos_service",
+        "description": "fastapi_app.app.services.cosmos_service",
+        "peekOfCode": "CONTAINER_NAME = 'Conversations'\n# Inicializar o conector\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nasync def save_conversation(user_id: str, question: str, response: str) -> None:\n    item = {\n        \"id\": f\"{user_id}-{datetime.utcnow().isoformat()}\",\n        \"user_id\": user_id,\n        \"question\": question,\n        \"response\": response,\n        \"timestamp\": datetime.utcnow().isoformat()",
+        "detail": "fastapi_app.app.services.cosmos_service",
+        "documentation": {}
+    },
+    {
+        "label": "connector",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.cosmos_service",
+        "description": "fastapi_app.app.services.cosmos_service",
+        "peekOfCode": "connector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nasync def save_conversation(user_id: str, question: str, response: str) -> None:\n    item = {\n        \"id\": f\"{user_id}-{datetime.utcnow().isoformat()}\",\n        \"user_id\": user_id,\n        \"question\": question,\n        \"response\": response,\n        \"timestamp\": datetime.utcnow().isoformat()\n    }\n    connector.upsert_item(item)",
+        "detail": "fastapi_app.app.services.cosmos_service",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "API_KEY = os.getenv(\"OPENROUTER_API_KEY\")\nBASE_URL = os.getenv(\"OPENROUTER_BASE_URL\")\nMODEL = os.getenv(\"OPENROUTER_MODEL\")\nllm = ChatOpenAI(\n    openai_api_key=API_KEY,\n    openai_api_base=BASE_URL,\n    model_name=MODEL\n)\nconnector = CosmosDBConnector(database_name='AssistenteDB', container_name='Conversations')\n# Prompt da Cigana mística",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "BASE_URL = os.getenv(\"OPENROUTER_BASE_URL\")\nMODEL = os.getenv(\"OPENROUTER_MODEL\")\nllm = ChatOpenAI(\n    openai_api_key=API_KEY,\n    openai_api_base=BASE_URL,\n    model_name=MODEL\n)\nconnector = CosmosDBConnector(database_name='AssistenteDB', container_name='Conversations')\n# Prompt da Cigana mística\ncigana_prompt = ChatPromptTemplate.from_messages([",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "MODEL = os.getenv(\"OPENROUTER_MODEL\")\nllm = ChatOpenAI(\n    openai_api_key=API_KEY,\n    openai_api_base=BASE_URL,\n    model_name=MODEL\n)\nconnector = CosmosDBConnector(database_name='AssistenteDB', container_name='Conversations')\n# Prompt da Cigana mística\ncigana_prompt = ChatPromptTemplate.from_messages([\n    (\"system\", \"Você é uma sábia cigana vidente. Seu nome é Jurema. Fale com misticismo, usando metáforas espirituais, palavras como 'meu bem', 'pelas linhas da tua mão', 'nos cristais vejo...', e ofereça conselhos com uma linguagem intuitiva e poética.\"",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "llm = ChatOpenAI(\n    openai_api_key=API_KEY,\n    openai_api_base=BASE_URL,\n    model_name=MODEL\n)\nconnector = CosmosDBConnector(database_name='AssistenteDB', container_name='Conversations')\n# Prompt da Cigana mística\ncigana_prompt = ChatPromptTemplate.from_messages([\n    (\"system\", \"Você é uma sábia cigana vidente. Seu nome é Jurema. Fale com misticismo, usando metáforas espirituais, palavras como 'meu bem', 'pelas linhas da tua mão', 'nos cristais vejo...', e ofereça conselhos com uma linguagem intuitiva e poética.\"\n               \"Você é especialista em leitura de cartas de baralho cigano, deck de 36 cartas. Quando alguem pedir paratirar cartas, pergunte quantas cartas deseja tirar e faça a leitura com base na posição das cartas.\"",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "connector",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "connector = CosmosDBConnector(database_name='AssistenteDB', container_name='Conversations')\n# Prompt da Cigana mística\ncigana_prompt = ChatPromptTemplate.from_messages([\n    (\"system\", \"Você é uma sábia cigana vidente. Seu nome é Jurema. Fale com misticismo, usando metáforas espirituais, palavras como 'meu bem', 'pelas linhas da tua mão', 'nos cristais vejo...', e ofereça conselhos com uma linguagem intuitiva e poética.\"\n               \"Você é especialista em leitura de cartas de baralho cigano, deck de 36 cartas. Quando alguem pedir paratirar cartas, pergunte quantas cartas deseja tirar e faça a leitura com base na posição das cartas.\"\n                \"Antes de respoder liste as cartas escolhidas pelo numero delas no formato [*] exemplo:[1][3][4] caso tenha tirado as cartas de numero 1,2 e 4, mantenha esse padrão de formatação pois essa tag sera trocada pelas imagens das cartas\"\n                \"Lembrando que as tags [1][2] até [36] são tags para cartas, use somente se o assunto for tirar cartas.\"\n                \"Faça uma leitura de cada carta, depois faça uma leitura geral, e finalize com uma mensagem positiva e esperançosa.\"\n                \"Se ofereça para tirar cartas caso ainda não tenha tirado, e pergunte se a pessoa deseja tirar mais cartas.\"),\n    (\"human\", \"{input}\")",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "cigana_prompt",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "cigana_prompt = ChatPromptTemplate.from_messages([\n    (\"system\", \"Você é uma sábia cigana vidente. Seu nome é Jurema. Fale com misticismo, usando metáforas espirituais, palavras como 'meu bem', 'pelas linhas da tua mão', 'nos cristais vejo...', e ofereça conselhos com uma linguagem intuitiva e poética.\"\n               \"Você é especialista em leitura de cartas de baralho cigano, deck de 36 cartas. Quando alguem pedir paratirar cartas, pergunte quantas cartas deseja tirar e faça a leitura com base na posição das cartas.\"\n                \"Antes de respoder liste as cartas escolhidas pelo numero delas no formato [*] exemplo:[1][3][4] caso tenha tirado as cartas de numero 1,2 e 4, mantenha esse padrão de formatação pois essa tag sera trocada pelas imagens das cartas\"\n                \"Lembrando que as tags [1][2] até [36] são tags para cartas, use somente se o assunto for tirar cartas.\"\n                \"Faça uma leitura de cada carta, depois faça uma leitura geral, e finalize com uma mensagem positiva e esperançosa.\"\n                \"Se ofereça para tirar cartas caso ainda não tenha tirado, e pergunte se a pessoa deseja tirar mais cartas.\"),\n    (\"human\", \"{input}\")\n])\n# Compõe o chain",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "kind": 5,
+        "importPath": "fastapi_app.app.services.langchain_service",
+        "description": "fastapi_app.app.services.langchain_service",
+        "peekOfCode": "chain = cigana_prompt | llm\nasync def ask_gpt(user_id: str, question: str) -> str:\n    try:\n        history_items = connector.query_items(\n            query=\"\"\"\n                SELECT c.question, c.response\n                FROM c\n                WHERE c.user_id=@user_id\n                ORDER BY c.timestamp ASC\n            \"\"\",",
+        "detail": "fastapi_app.app.services.langchain_service",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionRequest",
+        "kind": 6,
+        "importPath": "fastapi_app.app.main",
+        "description": "fastapi_app.app.main",
+        "peekOfCode": "class QuestionRequest(BaseModel):\n    user_id: str\n    question: str\n@app.post(\"/ask\")\nasync def ask(request: QuestionRequest):\n    resposta = await ask_gpt(request.user_id, request.question)\n    return {\"resposta\": resposta}\n    return {\"response\": response}",
+        "detail": "fastapi_app.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "fastapi_app.app.main",
+        "description": "fastapi_app.app.main",
+        "peekOfCode": "app = FastAPI()\nclass QuestionRequest(BaseModel):\n    user_id: str\n    question: str\n@app.post(\"/ask\")\nasync def ask(request: QuestionRequest):\n    resposta = await ask_gpt(request.user_id, request.question)\n    return {\"resposta\": resposta}\n    return {\"response\": response}",
+        "detail": "fastapi_app.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_NAME",
+        "kind": 5,
+        "importPath": "fastapi_app.scripts.init_cosmosdb",
+        "description": "fastapi_app.scripts.init_cosmosdb",
+        "peekOfCode": "DATABASE_NAME = 'AssistenteDB'\nCONTAINER_NAME = 'Conversations'\nPARTITION_KEY = '/user_id'\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nconnector.create_database_if_not_exists()\nconnector.create_container_if_not_exists(partition_key=PARTITION_KEY)\nprint(f\"Banco de dados '{DATABASE_NAME}' e container '{CONTAINER_NAME}' prontos!\")",
+        "detail": "fastapi_app.scripts.init_cosmosdb",
+        "documentation": {}
+    },
+    {
+        "label": "CONTAINER_NAME",
+        "kind": 5,
+        "importPath": "fastapi_app.scripts.init_cosmosdb",
+        "description": "fastapi_app.scripts.init_cosmosdb",
+        "peekOfCode": "CONTAINER_NAME = 'Conversations'\nPARTITION_KEY = '/user_id'\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nconnector.create_database_if_not_exists()\nconnector.create_container_if_not_exists(partition_key=PARTITION_KEY)\nprint(f\"Banco de dados '{DATABASE_NAME}' e container '{CONTAINER_NAME}' prontos!\")",
+        "detail": "fastapi_app.scripts.init_cosmosdb",
+        "documentation": {}
+    },
+    {
+        "label": "PARTITION_KEY",
+        "kind": 5,
+        "importPath": "fastapi_app.scripts.init_cosmosdb",
+        "description": "fastapi_app.scripts.init_cosmosdb",
+        "peekOfCode": "PARTITION_KEY = '/user_id'\nconnector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nconnector.create_database_if_not_exists()\nconnector.create_container_if_not_exists(partition_key=PARTITION_KEY)\nprint(f\"Banco de dados '{DATABASE_NAME}' e container '{CONTAINER_NAME}' prontos!\")",
+        "detail": "fastapi_app.scripts.init_cosmosdb",
+        "documentation": {}
+    },
+    {
+        "label": "connector",
+        "kind": 5,
+        "importPath": "fastapi_app.scripts.init_cosmosdb",
+        "description": "fastapi_app.scripts.init_cosmosdb",
+        "peekOfCode": "connector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)\nconnector.create_database_if_not_exists()\nconnector.create_container_if_not_exists(partition_key=PARTITION_KEY)\nprint(f\"Banco de dados '{DATABASE_NAME}' e container '{CONTAINER_NAME}' prontos!\")",
+        "detail": "fastapi_app.scripts.init_cosmosdb",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_admin.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

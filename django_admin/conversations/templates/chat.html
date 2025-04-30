@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat com Assistente</title>
+  <style>
+    :root {
+      --primary-color: #8B0000; /* Vermelho escuro */
+      --secondary-color: #FFD700; /* Dourado */
+      --accent-color: #7D3C98; /* Roxo vibrante */
+      --chat-bg: #F5E1C0; /* Bege claro com tom amarelado */
+      --user-chat-bg: #E3B04B; /* Amarelo dourado */
+      --assistant-chat-bg: #E8D5B5; /* Bege mais claro */
+      --sidebar-bg: #1E1E2A; /* Azul escuro quase preto */
+      --header-bg: #8B0000; /* Vermelho escuro */
+      --text-color: #2C1E1E; /* Marrom muito escuro */
+      --message-text: #272323; /* Quase preto */
+      --time-text: #5D4037; /* Marrom */
+      --gold-accent: #CFB53D; /* Tom de ouro envelhecido */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--chat-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 100%;
+      overflow-x: hidden;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B0000' fill-opacity='0.09'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CFB53D' fill-opacity='0.15'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-blend-mode: overlay;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: var(--sidebar-bg);
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      border: 1px solid var(--gold-accent);
+      position: relative;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--secondary-color), var(--accent-color), var(--secondary-color));
+      z-index: 1;
+    }
+
+    .header {
+      background: var(--header-bg);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background-image: linear-gradient(to right, var(--header-bg), var(--accent-color));
+      border-bottom: 2px solid var(--gold-accent);
+      position: relative;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+                transparent, var(--secondary-color), transparent,
+                var(--secondary-color), transparent,
+                var(--secondary-color), transparent);
+      opacity: 0.5;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      font-weight: bold;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--gold-accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-img::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: radial-gradient(circle at center, transparent 40%, rgba(207, 181, 61, 0.2) 70%);
+      animation: shine 4s infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    .chat-area {
+      height: 500px;
+      overflow-y: auto;
+      padding: 15px;
+      background-color: var(--chat-bg);
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CFB53D' fill-opacity='0.1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .message {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      max-width: 70%;
+    }
+
+    .message-user {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .message-assistant {
+      align-self: flex-start;
+      align-items: flex-start;
+    }
+
+    /* Preservar quebras de linha */
+    .message-bubble {
+      padding: 10px 15px;
+      border-radius: 12px;
+      position: relative;
+      word-wrap: break-word;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-user .message-bubble {
+      background-color: var(--user-chat-bg);
+      border-top-right-radius: 0;
+      border: 1px solid rgba(139, 0, 0, 0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to bottom right, rgba(255, 215, 0, 0.2), transparent);
+    }
+
+    .message-assistant .message-bubble {
+      background-color: var(--assistant-chat-bg);
+      border-top-left-radius: 0;
+      border: 1px solid rgba(207, 181, 61, 0.3);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to bottom right, rgba(125, 60, 152, 0.05), transparent);
+    }
+
+    .message-time {
+      font-size: 11px;
+      color: var(--time-text);
+      margin-top: 3px;
+      text-align: right;
+    }
+
+    .input-area {
+      padding: 15px;
+      background-color: var(--sidebar-bg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .input-area form {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .input-area textarea {
+      flex-grow: 1;
+      border: 1px solid var(--gold-accent);
+      border-radius: 25px;
+      padding: 12px 15px;
+      resize: none;
+      outline: none;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      color: var(--text-color);
+    }
+
+    .input-area textarea:focus {
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(207, 181, 61, 0.3);
+      background-color: white;
+    }
+
+    .input-area button {
+      width: 45px;
+      height: 45px;
+      border: 2px solid var(--gold-accent);
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      transition: all 0.2s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .input-area button:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .input-area button:active {
+      transform: scale(0.95);
+    }
+
+    /* Estilização da carta cigana */
+    .tarot-card {
+      display: inline-block;
+      margin: 5px;
+      max-width: 150px;
+      border-radius: 5px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tarot-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .tarot-card img {
+      width: 100%;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .tarot-card-name {
+      text-align: center;
+      font-size: 12px;
+      padding: 5px;
+      background: var(--primary-color);
+      color: white;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        margin: 0;
+        height: 100vh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-area {
+        flex-grow: 1;
+        height: auto;
+      }
+
+      .message {
+        max-width: 85%;
+      }
+
+      .tarot-card {
+        max-width: 120px;
+      }
+    }
+
+    /* Estilização da barra de rolagem */
+    .chat-area::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .chat-area::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .chat-area::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .chat-area::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilização para quebras de linha */
+    .message-bubble br {
+      display: block;
+      margin-top: 5px;
+    }
+
+    /* Ícones SVG */
+    .send-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    /* Estilo para modal da carta */
+    .card-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      position: relative;
+    }
+
+    .card-modal-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 8px;
+      border: 3px solid var(--gold-accent);
+    }
+
+    .card-modal-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+      background: var(--primary-color);
+      border: 2px solid var(--gold-accent);
+      border-radius: 50%;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="profile-img">C</div>
+      <h1>Jurema Cigano</h1>
+    </div>
+
+    <div class="chat-area" id="chat-area">
+      {% for c in conversas %}
+        <div class="message message-user">
+          <div class="message-bubble">
+            {{ c.question|linebreaks }}
+            <div class="message-time">12:00</div>
+          </div>
+        </div>
+        <div class="message message-assistant">
+          <div class="message-bubble">
+            {{ c.response|linebreaks }}
+            <div class="message-time">12:01</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="input-area">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+        <textarea name="question" rows="1" placeholder="Digite sua mensagem..." required></textarea>
+        <button type="submit">
+          <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para mostrar a carta ampliada -->
+  <div class="card-modal" id="cardModal">
+    <div class="card-modal-content">
+      <span class="card-modal-close" onclick="closeCardModal()">&times;</span>
+      <img id="modalCardImage" src="" alt="Carta Ampliada">
+    </div>
+  </div>
+  <script>
+    // Nomes das 36 cartas ciganas
+    const cardNames = [
+      "Cavaleiro", "Trevo", "Navio", "Casa", "Árvore", "Nuvens",
+      "Cobra", "Caixão", "Bouquet", "Foice", "Chicote", "Pássaros",
+      "Criança", "Raposa", "Urso", "Estrela", "Cegonha", "Cachorro",
+      "Torre", "Jardim", "Montanhas", "Caminhos", "Ratos", "Coração",
+      "Anel", "Livro", "Carta", "Homem", "Mulher", "Lírios",
+      "Sol", "Lua", "Chave", "Peixes", "Âncora", "Cruz"
+    ];
+
+    // Cards UrL
+    const cardImagePath = {
+        1:'https://static.wixstatic.com/media/f481dd_e50c5289af784d71bc79dc52b3022fc8~mv2.webp/v1/fill/w_148,h_236,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_e50c5289af784d71bc79dc52b3022fc8~mv2.webp',
+        2:'https://static.wixstatic.com/media/f481dd_f3df4b4af1d84defa2a0e47d18c6efa1~mv2.webp/v1/fill/w_120,h_193,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_f3df4b4af1d84defa2a0e47d18c6efa1~mv2.webp',
+        3:'https://static.wixstatic.com/media/f481dd_975c174e51b84f2488a891468433f6eb~mv2.webp/v1/fill/w_126,h_203,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_975c174e51b84f2488a891468433f6eb~mv2.webp',
+        4:'https://static.wixstatic.com/media/f481dd_af49110af76c4fdab6838a4b6a65aa29~mv2.webp/v1/fill/w_141,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_af49110af76c4fdab6838a4b6a65aa29~mv2.webp',
+        5:'https://static.wixstatic.com/media/f481dd_b93c706c881c4ddb81a2d5a4437ea4cb~mv2.webp/v1/fill/w_123,h_196,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_b93c706c881c4ddb81a2d5a4437ea4cb~mv2.webp',
+        6:'https://static.wixstatic.com/media/f481dd_4b66370625fa4ca18f7a1847bdb9c63a~mv2.webp/v1/fill/w_124,h_199,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_4b66370625fa4ca18f7a1847bdb9c63a~mv2.webp',
+        7:'https://static.wixstatic.com/media/f481dd_492984579aeb4d46a3dd8a808bb66c24~mv2.webp/v1/fill/w_130,h_209,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_492984579aeb4d46a3dd8a808bb66c24~mv2.webp',
+        8:'https://static.wixstatic.com/media/f481dd_2a7779c16850429e8596998a18b4759f~mv2.webp/v1/fill/w_139,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_2a7779c16850429e8596998a18b4759f~mv2.webp',
+        9:'https://static.wixstatic.com/media/f481dd_a27a5207fbec417b8a7f488c40de05be~mv2.webp/v1/fill/w_114,h_183,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_a27a5207fbec417b8a7f488c40de05be~mv2.webp',
+        10:'https://static.wixstatic.com/media/f481dd_32a1d58dc1aa448b8779e88fb25599f0~mv2.webp/v1/fill/w_116,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_32a1d58dc1aa448b8779e88fb25599f0~mv2.webp',
+        11:'https://static.wixstatic.com/media/f481dd_8842ec44500747bebcd573ad382a83f0~mv2.webp/v1/fill/w_125,h_201,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_8842ec44500747bebcd573ad382a83f0~mv2.webp',
+        12:'https://static.wixstatic.com/media/f481dd_086d4532d469413fbf13a8a6ae6a5d21~mv2.webp/v1/fill/w_126,h_203,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_086d4532d469413fbf13a8a6ae6a5d21~mv2.webp',
+        13:'https://static.wixstatic.com/media/f481dd_715c0915e16c4f5eb6ca3b2b7832217a~mv2.webp/v1/fill/w_153,h_245,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_715c0915e16c4f5eb6ca3b2b7832217a~mv2.webp',
+        14:'https://static.wixstatic.com/media/f481dd_c4e187184e87411abad5f9859746c9ea~mv2.jpg/v1/fill/w_128,h_205,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_c4e187184e87411abad5f9859746c9ea~mv2.jpg',
+        15:'https://static.wixstatic.com/media/f481dd_2f08cf55130340c99e2fed7d409d4d92~mv2.webp/v1/fill/w_125,h_201,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_2f08cf55130340c99e2fed7d409d4d92~mv2.webp',
+        16:'https://static.wixstatic.com/media/f481dd_c6967f029c514a70b8453d273d4df24f~mv2.webp/v1/fill/w_120,h_193,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_c6967f029c514a70b8453d273d4df24f~mv2.webp',
+        17:'https://static.wixstatic.com/media/f481dd_29aa9212e52847d3820eb84f13ceadab~mv2.webp/v1/fill/w_121,h_195,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_29aa9212e52847d3820eb84f13ceadab~mv2.webp',
+        18:'https://static.wixstatic.com/media/f481dd_cba7d01a465f4293bbcb3c6a832ef4dd~mv2.webp/v1/fill/w_138,h_221,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_cba7d01a465f4293bbcb3c6a832ef4dd~mv2.webp',
+        19:'https://static.wixstatic.com/media/f481dd_f915d433ac934618bcd3f98c6cb54867~mv2.webp/v1/fill/w_121,h_195,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_f915d433ac934618bcd3f98c6cb54867~mv2.webp',
+        20:'https://static.wixstatic.com/media/f481dd_2b54819a3af4466d80980cd20ce1c125~mv2.webp/v1/fill/w_125,h_201,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_2b54819a3af4466d80980cd20ce1c125~mv2.webp',
+        21:'https://static.wixstatic.com/media/f481dd_261ee564ea8746d5a2e20a1b1d24b359~mv2.webp/v1/fill/w_130,h_209,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_261ee564ea8746d5a2e20a1b1d24b359~mv2.webp',
+        22:'https://static.wixstatic.com/media/f481dd_ff3bb5a19e744e07bdd7977bed618f74~mv2.webp/v1/fill/w_126,h_203,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_ff3bb5a19e744e07bdd7977bed618f74~mv2.webp',
+        23:'https://static.wixstatic.com/media/f481dd_efa35e64fb384541a856d6330d3f2ac6~mv2.webp/v1/fill/w_119,h_191,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_efa35e64fb384541a856d6330d3f2ac6~mv2.webp',
+        24:'https://static.wixstatic.com/media/f481dd_59788934ccb44e85ba2c3ec160e8a2ac~mv2.png/v1/fill/w_121,h_195,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_59788934ccb44e85ba2c3ec160e8a2ac~mv2.png',
+        25:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnvRf16YNLDrJ48t7JDCR0uikvCpguGnBfPA&s',
+        26:'https://static.wixstatic.com/media/f481dd_102c6a7931664c6186a3f7985ddfde60~mv2.webp/v1/fill/w_145,h_233,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_102c6a7931664c6186a3f7985ddfde60~mv2.webp',
+        27:'https://static.wixstatic.com/media/f481dd_3348d4f825594aa9b0fc4be24a29ee61~mv2.webp/v1/fill/w_115,h_185,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_3348d4f825594aa9b0fc4be24a29ee61~mv2.webp',
+        28:'https://static.wixstatic.com/media/f481dd_bd41fab1772b40eda0af40b061a71819~mv2.webp/v1/fill/w_151,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_bd41fab1772b40eda0af40b061a71819~mv2.webp',
+        29:'https://static.wixstatic.com/media/f481dd_c297f327e4f14be281b8a50cc64b8432~mv2.webp/v1/fill/w_115,h_185,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_c297f327e4f14be281b8a50cc64b8432~mv2.webp',
+        30:'https://static.wixstatic.com/media/f481dd_6f166d53cd6c48eaac798331854991a6~mv2.webp/v1/fill/w_141,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_6f166d53cd6c48eaac798331854991a6~mv2.webp',
+        31:'https://static.wixstatic.com/media/f481dd_1d76f69e58c44bd3a4058fd3ab811e04~mv2.webp/v1/fill/w_114,h_183,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_1d76f69e58c44bd3a4058fd3ab811e04~mv2.webp',
+        32:'https://static.wixstatic.com/media/f481dd_19a595320acc45cd9ea4f2e5db9c3429~mv2.webp/v1/fill/w_139,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_19a595320acc45cd9ea4f2e5db9c3429~mv2.webp',
+        33:'https://static.wixstatic.com/media/f481dd_4d4e530df0874ba8a69cc5cb6face152~mv2.webp/v1/fill/w_124,h_199,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_4d4e530df0874ba8a69cc5cb6face152~mv2.webp',
+        34:'https://static.wixstatic.com/media/f481dd_51c701b3e28a4a1191008dfeba6a220c~mv2.webp/v1/fill/w_156,h_251,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_51c701b3e28a4a1191008dfeba6a220c~mv2.webp',
+        35:'https://static.wixstatic.com/media/f481dd_55c74eba510a4f1c98bd904854ab1843~mv2.webp/v1/fill/w_143,h_229,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_55c74eba510a4f1c98bd904854ab1843~mv2.webp',
+        36:'https://static.wixstatic.com/media/f481dd_66fc3cacf5db49069be2beeaba5f74bf~mv2.webp/v1/fill/w_135,h_216,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f481dd_66fc3cacf5db49069be2beeaba5f74bf~mv2.webp'
+    }
+    // Função para processar as mensagens e substituir os códigos [n] por cartas
+    function processMessages() {
+      const messageBubbles = document.querySelectorAll('.message-assistant .message-bubble');
+
+      messageBubbles.forEach(bubble => {
+        let content = bubble.innerHTML;
+
+        // Salvar as tags de tempo para restaurar depois
+        const timeTag = bubble.querySelector('.message-time');
+        const timeHTML = timeTag ? timeTag.outerHTML : '';
+
+        // Remover as tags de tempo temporariamente
+        if (timeTag) {
+          content = content.replace(timeTag.outerHTML, '');
+        }
+
+        // Substituir texto entre ** ** por tags <strong>
+        content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+        // Substituir \n por <br> (se ainda existir)
+        content = content.replace(/\\n/g, '<br>');
+
+        // Substituir [n] pelos elementos de carta
+        content = content.replace(/\[(\d+)\]/g, function(match, cardNumber) {
+          const cardIndex = parseInt(cardNumber);
+          const cardUrl = cardImagePath[cardIndex]; // Obter a URL da carta pelo índice
+          const cardName = cardNames[cardIndex - 1]; // Obter o nome da carta pelo índice
+
+          if (cardUrl) {
+            return `<div class="tarot-card" onclick="showCardModal(${cardIndex})">
+                      <img src="${cardUrl}" alt="Carta ${cardNumber}" onerror="this.src='${cardImagePath[1]}'">
+                      <div class="tarot-card-name">${cardIndex}. ${cardName}</div>
+                    </div>`;
+          }
+          return match; // Se não houver URL, mantém o texto original
+        });
+
+        // Restaurar as tags de tempo
+        if (timeTag) {
+          content = content + timeHTML;
+        }
+
+        bubble.innerHTML = content;
+      });
+    }
+
+    // Função para mostrar o modal da carta ampliada
+    function showCardModal(cardIndex) {
+      const modal = document.getElementById('cardModal');
+      const modalImg = document.getElementById('modalCardImage');
+      const cardNumber = cardIndex;
+
+      // Obter a URL da carta pelo índice
+      const cardUrl = cardImagePath[cardNumber];
+
+      if (cardUrl) {
+        modalImg.src = cardUrl;
+        modalImg.alt = `${cardNumber}. ${cardNames[cardIndex]}`;
+        modalImg.onerror = function () {
+          this.src = cardImagePath[1]; // Fallback para a carta 1 se a imagem não carregar
+        };
+
+        modal.style.display = 'flex';
+
+        // Prevenir rolagem do corpo quando o modal estiver aberto
+        document.body.style.overflow = 'hidden';
+      } else {
+        console.warn(`URL da carta ${cardNumber} não encontrada no dicionário.`);
+      }
+    }
+
+    // Função para fechar o modal
+    function closeCardModal() {
+      document.getElementById('cardModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar o modal ao clicar fora da imagem
+    window.onclick = function(event) {
+      const modal = document.getElementById('cardModal');
+      if (event.target === modal) {
+        closeCardModal();
+      }
+    }
+
+    // Rolar para o final do chat ao carregar a página
+    window.onload = function() {
+      const chatArea = document.getElementById('chat-area');
+      chatArea.scrollTop = chatArea.scrollHeight;
+
+      // Processar o texto e as cartas após o carregamento
+      processMessages();
+    };
+
+
+
+    // Ajustar altura do textarea automaticamente
+    const textarea = document.querySelector('textarea');
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight < 100) ? this.scrollHeight + 'px' : '100px';
+    });
+
+    // Enviar mensagem ao pressionar Enter (Shift+Enter para quebra de linha)
+    textarea.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        this.form.submit();
+      }
+    });
+  </script>
+</body>
+</html>
