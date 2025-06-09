@@ -27,18 +27,12 @@ SECRET_KEY = 'django-insecure-a$df^%255ooiu31bi@l0053p6d@0(bahk)n%xlah!r)kzc0ydl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '*',
-    "whole-jobs-shave.loca.lt",
-    "localhost",
-    "127.0.0.1"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 CSRF_TRUSTED_ORIGINS = [
-    'https://*',
-    "https://df8e-201-17-152-2.ngrok-free.app",
-    "https://whole-jobs-shave.loca.lt"
+    'https://47eb-201-17-152-2.ngrok-free.app'
 ]
 
 INSTALLED_APPS = [

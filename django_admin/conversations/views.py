@@ -16,7 +16,7 @@ FASTAPI_URL = os.getenv("FASTAPI_URL", "http://127.0.0.1:8000/ask")
 
 connector = CosmosDBConnector(database_name=DATABASE_NAME, container_name=CONTAINER_NAME)
 def chat_view(request):
-    user_id = request.GET.get("user_id", "teste2")
+    user_id = request.GET.get("user_id", "testee2")
     resposta = None
 
     if request.method == "POST":
